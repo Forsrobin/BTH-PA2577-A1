@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+    frontend-service:
+        build:
+            context: ./frontend/
+        restart: always
+        image: forsrobin/frontend_as_1
+        ports:
+            - '80:80'
+        environment:
+            - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+            - NGINX_VERSION=1.15.8-1~stretch
+            - NJS_VERSION=1.15.8.0.2.7-1~stretch
+            - CHOKIDAR_USEPOLLING=true
+        depends_on:
+            - "backend"
+    backend-service:
+      image: forsrobin/backend_as_1
+      build:
+          context: ./backend/
+      ports:
+          - '3009:3009'
+      environment:
+          - PORT=3009
+          - DATABASE_URL=postgres://postgres:hfedh7834noui3f4h89735g4j89@192.168.1.52:5433/a1?schema=public
+          - CORS_ORIGIN=http://localhost
