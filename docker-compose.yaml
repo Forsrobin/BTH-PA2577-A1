@@ -13,7 +13,7 @@ services:
             - NJS_VERSION=1.15.8.0.2.7-1~stretch
             - CHOKIDAR_USEPOLLING=true
         depends_on:
-            - "backend"
+            - "backend-service"
     backend-service:
       image: forsrobin/backend_as_1
       build:
