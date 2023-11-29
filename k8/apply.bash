@@ -12,6 +12,7 @@ kubectl apply -f backend/backend.yaml
 kubectl rollout restart -f backend/backend.yaml
 kubectl apply -f backend/backend_service.yaml
 
+
 # Frontend stuff
 kubectl apply -f frontend/frontend.yaml
 kubectl rollout restart -f frontend/frontend.yaml
