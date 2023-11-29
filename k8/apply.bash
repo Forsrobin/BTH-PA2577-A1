@@ -1,5 +1,5 @@
 # Voluem snad secrets
-kubectl apply -f volumes/volumes.yaml
+kubectl apply -f volumes/volume.yaml
 kubectl apply -f volumes/volume_claim.yaml
 kubectl apply -f secrets/secrets.yaml
 

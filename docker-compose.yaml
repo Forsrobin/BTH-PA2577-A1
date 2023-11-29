@@ -6,7 +6,7 @@ services:
         restart: always
         image: forsrobin/frontend_as_1
         ports:
-            - '80:80'
+            - '2000:80'
         environment:
             - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
             - NGINX_VERSION=1.15.8-1~stretch
