@@ -15,12 +15,13 @@ services:
         depends_on:
             - "backend-service"
     backend-service:
-      image: forsrobin/backend_as_1
-      build:
-          context: ./backend/
-      ports:
-          - '3009:3009'
-      environment:
-          - PORT=3009
-          - DATABASE_URL=postgres://postgres:<pass>@192.168.1.52:5433/a1?schema=public
-          - CORS_ORIGIN=http://localhost
+        image: forsrobin/backend_as_1
+        build:
+            context: ./backend/
+        ports:
+            - '3009:3009'
+        env_file:
+            - ./backend/.env
+        environment:
+            - PORT=3009
+            - CORS_ORIGIN=http://localhost

@@ -8,6 +8,5 @@ RUN yarn install
 WORKDIR /usr/src/app/server
 
 RUN yarn global add ts-node
-RUN yarn migrate
 
-CMD [ "ts-node", "src/index.ts" ]
+CMD [ "yarn", "start" ]

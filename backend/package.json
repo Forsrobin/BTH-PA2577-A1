@@ -4,7 +4,7 @@
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
-    "start": "yarn migrate && node dist/index.js",
+    "start": "yarn migrate && ts-node src/index.ts",
     "dev": "nodemon src/index.ts",
     "build": "tsc -p .",
     "prisma": "prisma generate",
