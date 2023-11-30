@@ -22,5 +22,5 @@ services:
           - '3009:3009'
       environment:
           - PORT=3009
-          - DATABASE_URL=postgres://postgres:hfedh7834noui3f4h89735g4j89@192.168.1.52:5433/a1?schema=public
+          - DATABASE_URL=postgres://postgres:<pass>@192.168.1.52:5433/a1?schema=public
           - CORS_ORIGIN=http://localhost
